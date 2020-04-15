@@ -1,5 +1,5 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.PageLoadStrategy;
+//import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,13 +23,15 @@ public class sample {
 //// Instantiate the chrome driver
 //    WebDriver driver = new ChromeDriver(options);
 
-    WebDriverManager.getInstance(CHROME).setup();
+//    WebDriverManager.getInstance(CHROME).setup();
+    WebDriverManager.chromedriver().version("2.26").setup();
+
     ChromeOptions options = new ChromeOptions();
 
     WebDriver driver = new ChromeDriver(options);
 //
 //    options.setPageLoadStrategy(PageLoadStrategy.EAGER); // https://www.skptricks.com/2018/08/timed-out-receiving-message-from-renderer-selenium.html
-//    options.addArguments("start-maximized"); // https://stackoverflow.com/a/26283818/1689770
+//    options.addArguments("start-maximized"); // https://stackoverflow."com/a/26283818/1689770
 //    options.addArguments("enable-automation"); // https://stackoverflow.com/a/43840128/1689770
 //    options.addArguments("--headless"); // only if you are ACTUALLY running headless
 //    options.addArguments("--no-sandbox"); //https://stackoverflow.com/a/50725918/1689770
@@ -44,6 +46,6 @@ public class sample {
     WebDriverWait wait = new WebDriverWait(driver, 20);
     WebElement el = wait.until(ExpectedConditions.elementToBeClickable(By.className("column-link-list__link-container footer-container__item-content")));
     driver.getTitle();
-    driver.close();
+    driver.quit();
 }
 }
