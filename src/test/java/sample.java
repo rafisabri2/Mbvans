@@ -24,11 +24,12 @@ public class sample {
 //    WebDriver driver = new ChromeDriver(options);
 
 //    WebDriverManager.getInstance(CHROME).setup();
-    WebDriverManager.chromedriver().version("2.26").setup();
-
+    WebDriverManager.chromedriver().version("2.40").setup();
+    
     ChromeOptions options = new ChromeOptions();
 
-    WebDriver driver = new ChromeDriver(options);
+  WebDriver driver = new ChromeDriver(options);
+  //  WebDriver driver=new ChromeDriver();
 //
 //    options.setPageLoadStrategy(PageLoadStrategy.EAGER); // https://www.skptricks.com/2018/08/timed-out-receiving-message-from-renderer-selenium.html
 //    options.addArguments("start-maximized"); // https://stackoverflow."com/a/26283818/1689770
@@ -43,9 +44,12 @@ public class sample {
 
     driver.get("https://www.mbvans.com/en/cpo");
     driver.manage().window().maximize();
-    WebDriverWait wait = new WebDriverWait(driver, 20);
-    WebElement el = wait.until(ExpectedConditions.elementToBeClickable(By.className("column-link-list__link-container footer-container__item-content")));
-    driver.getTitle();
+   WebDriverWait wait = new WebDriverWait(driver, 20);
+   
+ WebElement a=  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"corporate\"]/div[1]/section/div[2]/section/div/p[2]/a")));
+ a.click();
+  //   wait.until(ExpectedConditions.elementToBeClickable(By.className("column-link-list__link-container footer-container__item-content")));
+   // driver.getTitle();
     driver.quit();
 }
 }
