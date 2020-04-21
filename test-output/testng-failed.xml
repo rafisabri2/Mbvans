@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)" preserve-order="false">
+    <classes>
+      <class name="com.testcases.LoginMBVansTest">
+        <methods>
+          <include name="Section3_Eligibility"/>
+          <include name="LogOutMBVans"/>
+          <include name="MBVans_Setup"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

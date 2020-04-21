@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="Admin-PC" name="com.testcases.LoginMBVansTest" tests="5" failures="0" timestamp="21 Apr 2020 08:11:14 GMT" time="61.404" errors="0">
+  <testcase name="Section1_Header" time="0.295" classname="com.testcases.LoginMBVansTest"/>
+  <testcase name="Section2_Details" time="0.314" classname="com.testcases.LoginMBVansTest"/>
+  <testcase name="Section3_Eligibility" time="0.765" classname="com.testcases.LoginMBVansTest"/>
+  <testcase name="Section4_FAQ" time="0.198" classname="com.testcases.LoginMBVansTest"/>
+  <testcase name="Section5_FindADealer" time="35.234" classname="com.testcases.LoginMBVansTest"/>
+</testsuite>
