@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="67046" started-at="2020-04-21T17:11:06Z" finished-at="2020-04-21T17:12:13Z">
+  <suite name="Default suite" duration-ms="42187" started-at="2020-04-24T19:14:19Z" finished-at="2020-04-24T19:15:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="67046" started-at="2020-04-21T17:11:06Z" finished-at="2020-04-21T17:12:13Z">
+    <test name="Default test" duration-ms="42187" started-at="2020-04-24T19:14:19Z" finished-at="2020-04-24T19:15:01Z">
       <class name="com.testcases.LoginMBVansTest">
-        <test-method status="PASS" signature="MBVans_Setup()" name="MBVans_Setup" is-config="true" duration-ms="31476" started-at="2020-04-21T17:11:06Z" finished-at="2020-04-21T17:11:37Z">
+        <test-method status="PASS" signature="MBVans_Setup()" name="MBVans_Setup" is-config="true" duration-ms="19703" started-at="2020-04-24T19:14:19Z" finished-at="2020-04-24T19:14:38Z">
         </test-method>
-        <test-method status="PASS" signature="Section1_Header()" name="Section1_Header" duration-ms="319" started-at="2020-04-21T17:11:37Z" finished-at="2020-04-21T17:11:38Z">
+        <test-method status="PASS" signature="Section1_Header()" name="Section1_Header" duration-ms="211" started-at="2020-04-24T19:14:38Z" finished-at="2020-04-24T19:14:39Z">
         </test-method>
-        <test-method status="PASS" signature="Section2_Details()" name="Section2_Details" duration-ms="524" started-at="2020-04-21T17:11:38Z" finished-at="2020-04-21T17:11:38Z">
+        <test-method status="PASS" signature="Section2_Details()" name="Section2_Details" duration-ms="446" started-at="2020-04-24T19:14:39Z" finished-at="2020-04-24T19:14:39Z">
         </test-method>
-        <test-method status="PASS" signature="Section3_Eligibility()" name="Section3_Eligibility" duration-ms="1074" started-at="2020-04-21T17:11:38Z" finished-at="2020-04-21T17:11:39Z">
+        <test-method status="PASS" signature="Section3_Eligibility()" name="Section3_Eligibility" duration-ms="699" started-at="2020-04-24T19:14:39Z" finished-at="2020-04-24T19:14:40Z">
         </test-method>
-        <test-method status="PASS" signature="Section4_FAQ()" name="Section4_FAQ" duration-ms="157" started-at="2020-04-21T17:11:39Z" finished-at="2020-04-21T17:11:40Z">
+        <test-method status="PASS" signature="Section4_FAQ()" name="Section4_FAQ" duration-ms="150" started-at="2020-04-24T19:14:40Z" finished-at="2020-04-24T19:14:40Z">
         </test-method>
-        <test-method status="PASS" signature="Section5_FindADealer()" name="Section5_FindADealer" duration-ms="33378" started-at="2020-04-21T17:11:40Z" finished-at="2020-04-21T17:12:13Z">
+        <test-method status="PASS" signature="Section5_FindADealer()" name="Section5_FindADealer" duration-ms="19866" started-at="2020-04-24T19:14:40Z" finished-at="2020-04-24T19:15:00Z">
         </test-method>
-        <test-method status="PASS" signature="LogOutMBVans()" name="LogOutMBVans" is-config="true" duration-ms="1" started-at="2020-04-21T17:12:13Z" finished-at="2020-04-21T17:12:13Z">
+        <test-method status="PASS" signature="LogOutMBVans()" name="LogOutMBVans" is-config="true" duration-ms="1079" started-at="2020-04-24T19:15:00Z" finished-at="2020-04-24T19:15:01Z">
         </test-method>
       </class>
     </test>

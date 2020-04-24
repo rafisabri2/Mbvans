@@ -5,9 +5,9 @@
     <classes>
       <class name="com.testcases.LoginMBVansTest">
         <methods>
-          <include name="Section3_Eligibility"/>
           <include name="LogOutMBVans"/>
           <include name="MBVans_Setup"/>
+          <include name="Section1_Header"/>
         </methods>
       </class>
     </classes>
