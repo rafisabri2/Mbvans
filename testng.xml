@@ -6,7 +6,7 @@
  <!--  <parameter name="Url" value="https://www.mbvans.com/en/cpo"></parameter> -->
 
     <classes>
-      <class name="com.testcases.LoginMBVansTest"/>
+      <class name="com.testcases.ExtentReport"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

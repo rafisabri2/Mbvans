@@ -1,12 +1,11 @@
 package com.pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginMBVansPage {
+public class LoginMBVansPage  {
 
-	 WebDriver driver;
+	WebDriver driver;
 	By hero_image =By.xpath("//*[@id=\"corporate\"]/div[1]/section/div[1]/picture/img");
 	
 	By hero_text=By.xpath("//*[@id=\"corporate\"]/div[1]/section/div[2]/section/div/h1");
