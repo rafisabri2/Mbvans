@@ -23,7 +23,7 @@ public class LoginMBVansTest  extends Baseclass {
 		  
 		String Actual_hero_text=mbvans.Get_Hero_text(driver).getText();
 		logger.info("Hero text details from UI is " +Actual_hero_text+"");
-		String Expected_hero_text=read_excel.getCellData(0, 0, 0);
+		String Expected_hero_text=read_excel.getCellData_sheetname(2, 1, 1);
 		Assert.assertEquals(Actual_hero_text, Expected_hero_text);
 		logger.info("Hero text details from Input xls file is " +Expected_hero_text+ "");
 		if(Actual_hero_text.equals(Expected_hero_text))
@@ -39,7 +39,7 @@ public class LoginMBVansTest  extends Baseclass {
 		System.out.println("Hero text is"+Actual_hero_text);
 		System.out.println("Expected hero text"+Expected_hero_text);
 //		Helper.CaptureScreenshot(driver);
-		
+		driver.manage().timeouts().implicitlyWait(120, TimeUnit.MINUTES);
 	}
 	
 	@Test(priority=1)
@@ -53,7 +53,7 @@ public class LoginMBVansTest  extends Baseclass {
 		String details=mbvans.Get_Details_text(driver).getText();
 		System.out.println("Details"+details);
 		logger.info("Captured Section2 text details from UI");
-		String Expected_sec2_text=read_excel.getCellData(0, 1, 0);
+		String Expected_sec2_text=read_excel.getCellData_sheetname(3, 2, 1);
 		logger.info("Section2 text details from Input xls file is " +Expected_sec2_text+ "");
 		Assert.assertEquals(details, Expected_sec2_text);
 		if(details.equals(Expected_sec2_text))
@@ -89,13 +89,13 @@ public class LoginMBVansTest  extends Baseclass {
 		System.out.println(""+description1);
 		logger.info("Captured Section3 Title" +description1+" details from UI");
 		
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.MINUTES);
+
 		
 		String description2=mbvans.GetEligibilityDescription2(driver).getText();
 		System.out.println(""+description2);
 		logger.info("Captured Section3 text details from UI");
-		
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.MINUTES);
+
+//		driver.manage().timeouts().implicitlyWait(120, TimeUnit.MINUTES);
 //		Helper.CaptureScreenshot(driver);
 	}
 	

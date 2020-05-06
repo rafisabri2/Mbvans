@@ -28,7 +28,7 @@ public class Baseclass {
     public static ExtentTest logger;
     @BeforeSuite
     public void setupsuite() throws IOException {
-        read_excel=new ExcelDataProvider(System.getProperty("user.dir")+"/TestData/ExportExcel.xlsx");
+        read_excel=new ExcelDataProvider(System.getProperty("user.dir")+"/TestData/CPO.xlsx");
         config=new ConfigDataProvider();
         ExtentHtmlReporter extent = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/CPO"+Helper.getCurrentDate()+".html"));
         report = new ExtentReports();

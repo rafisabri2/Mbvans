@@ -33,6 +33,14 @@ public class ExcelDataProvider {
 
         }
 
+    public String getCellData_sheetname(int sheetname,int row,int column)
+    {
+        sheet=wb.getSheet(String.valueOf(sheetname));
+        String data=sheet.getRow(row).getCell(column).getStringCellValue();
+        return data;
+
+    }
+
         public static void main(String args[])
         {
             ExcelDataProvider excel=new ExcelDataProvider(System.getProperty("user.dir")+"/TestData/ExportExcel.xlsx");
