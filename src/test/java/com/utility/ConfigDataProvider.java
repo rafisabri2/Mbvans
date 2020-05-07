@@ -7,7 +7,7 @@ import java.util.Properties;
 public class ConfigDataProvider {
     Properties prop;
     public ConfigDataProvider() {
-        File src=new File("C:\\Users\\Rafi\\IdeaProjects\\Vans_Poc\\Config\\Config.properties");
+        File src=new File("C:\\Users\\Admin\\git\\Mbvans\\Config\\config.properties");
 try {
     FileInputStream fis = new FileInputStream(src);
     prop = new Properties();
