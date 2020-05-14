@@ -1,8 +1,13 @@
 package com.Library;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 public class ReusableFunctions {
 //public static WebDriver driver;
@@ -41,7 +46,23 @@ public class ReusableFunctions {
         js.executeScript("arguments[0].scrollIntoView();", ele);
 
     }
+    public static void scrolltobottom(WebDriver driver)
+    {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        js.executeScript("window.scrollTo(document.body.scrollHeight,0)");
 
+    }
+
+    public void waitfor(WebDriver driver, int timeUnit)
+    {
+        WebDriverWait wait = new WebDriverWait(driver, ((TimeUnit.SECONDS).toSeconds(timeUnit)));
+    }
+    public void waitforele(WebDriver driver,int time,WebElement ele)
+    {
+        WebDriverWait wait = new WebDriverWait(driver,time);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(""+ele+"")));
+    }
 
 
 }

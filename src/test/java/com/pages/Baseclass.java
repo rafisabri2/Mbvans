@@ -1,5 +1,6 @@
 package com.pages;
 
+import com.Conf.Extractor.ExtractionTool;
 import com.Library.ReusableFunctions;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -28,6 +29,8 @@ public class Baseclass {
     public static ExtentTest logger;
     @BeforeSuite
     public void setupsuite() throws IOException {
+        ExtractionTool extract= new ExtractionTool();
+//        extract.Runextraction();
         read_excel=new ExcelDataProvider(System.getProperty("user.dir")+"/TestData/CPO.xlsx");
         config=new ConfigDataProvider();
         ExtentHtmlReporter extent = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/CPO"+Helper.getCurrentDate()+".html"));
@@ -39,10 +42,12 @@ public class Baseclass {
     @BeforeClass
     public void Setup()
     {
-//        String Url=read_excel.getCellData(0, 0, 0);
-        driver= BrowserFactory.startbrowser(driver,config.Getbrowser(),config.Geturl());
-//        driver.navigate().to(config.Geturl());
-        ReusableFunctions.checkPageIsReady(driver);
+    //        String Url=read_excel.getCellData(0, 0, 0);
+            driver= BrowserFactory.startbrowser(driver,config.Getbrowser(),config.Geturl());
+    //        driver.navigate().to(config.Geturl());
+            ReusableFunctions.checkPageIsReady(driver);
+//            ReusableFunctions.scrolltobottom(driver);
+
     }
     @AfterClass
     public void Teardown()
@@ -57,11 +62,7 @@ public class Baseclass {
 //            Helper.CaptureScreenshot(driver);
             logger.fail("Test Failed" , MediaEntityBuilder.createScreenCaptureFromPath(Helper.CaptureScreenshot(driver)).build());
         }
-        else if(result.getStatus()==ITestResult.SUCCESS)
-        {
-//            Helper.CaptureScreenshot(driver);
-            logger.pass("Test Passed" , MediaEntityBuilder.createScreenCaptureFromPath(Helper.CaptureScreenshot(driver)).build());
-        }
+
         else if(result.getStatus()==ITestResult.SKIP)
         {
 //            Helper.CaptureScreenshot(driver);

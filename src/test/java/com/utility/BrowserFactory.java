@@ -45,10 +45,10 @@ public class BrowserFactory {
     {
         System.out.println("We do not support the browser");
     }
-    driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+    driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
     driver.manage().window().maximize();
     driver.get(appurl);
-    driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
     return  driver;
     }
 

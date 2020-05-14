@@ -47,9 +47,9 @@ public class LoginMBVansPage {
 	
 	By find_dealer_button=By.xpath("//*[@id=\"frequently-asked-questions\"]/div[3]/section/div[2]/div/a");
 	
-	By find_dealer_title=By.xpath("//*[@id=\"main-content\"]");
+	By find_dealer_title=By.xpath("//*[@id=\"frequently-asked-questions\"]/div[3]/section/div[2]/div/h3");
 	
-	By find_dealer_copy=By.xpath("");
+	By find_dealer_copy=By.xpath("//*[@id=\"frequently-asked-questions\"]/div[3]/section/div[2]/div/div/p");
 	
 	public LoginMBVansPage(WebDriver driver)
 	{
