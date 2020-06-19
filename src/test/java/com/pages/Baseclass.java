@@ -30,7 +30,7 @@ public class Baseclass {
     @BeforeSuite
     public void setupsuite() throws IOException {
         ExtractionTool extract= new ExtractionTool();
-//        extract.Runextraction();
+        extract.Runextraction();
         read_excel=new ExcelDataProvider(System.getProperty("user.dir")+"/TestData/CPO.xlsx");
         config=new ConfigDataProvider();
         ExtentHtmlReporter extent = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/CPO"+Helper.getCurrentDate()+".html"));

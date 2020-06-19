@@ -1,5 +1,6 @@
 package com.Conf.Extractor;
 
+import com.utility.ConfigDataProvider;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -28,15 +29,18 @@ import java.util.List;
 //import java.nio.file.Files;
 //import java.nio.file.Files;
 
-    public class ExtractionTool {
+    public class ExtractionTool extends ConfigDataProvider {
         static WebDriverWait wait;
+        ConfigDataProvider cdp = new ConfigDataProvider();
 @Test
  public void Runextraction()
 {
 
     try {
-        String baseUrl = "https://mbusarf.atlassian.net/wiki/spaces/VOW/pages/845547115/CPO";
-//            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        String baseUrl = cdp.GetConfExtractUrl();
+//        "https://mbusarf.atlassian.net/wiki/spaces/VOW/pages/845547115/CPO"
+//                https://mbusarf.atlassian.net/wiki/spaces/VOW/pages/1000604963/Events
+            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         WebDriverManager.chromedriver().version("2.40").setup();
 
         ChromeOptions options = new ChromeOptions();
@@ -70,7 +74,7 @@ import java.util.List;
         element.click();
 
         wait = null;
-        wait = new WebDriverWait(driver, 1000);
+        wait = new WebDriverWait(driver, 2000);
         List<WebElement> listOfTables = wait
                 .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("table")));
 
@@ -239,7 +243,7 @@ import java.util.List;
 
             n++;
         }
-        try (FileOutputStream outputStream = new FileOutputStream(System.getProperty("user.dir") + "/TestData/CPO.xlsx")) {
+        try (FileOutputStream outputStream = new FileOutputStream(System.getProperty("user.dir") + "/TestData/Events.xlsx")) {
             workbook.write(outputStream);
         } catch (FileNotFoundException e) {
             e.printStackTrace();

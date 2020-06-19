@@ -24,6 +24,11 @@ catch (Exception e)
        return prop.getProperty("Browser");
     }
 
+    public String GetConfExtractUrl()
+    {
+        return prop.getProperty("confextCPOUrl");
+    }
+
     public String Geturl()
     {
         return prop.getProperty("Url");

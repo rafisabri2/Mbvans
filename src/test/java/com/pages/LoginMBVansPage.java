@@ -6,168 +6,251 @@ import org.openqa.selenium.WebElement;
 
 public class LoginMBVansPage {
 
-	 WebDriver driver;
+	WebDriver driver;
+	//Home Page
 	By hero_image =By.xpath("//*[@id=\"corporate\"]/div[1]/section/div[1]/picture/img");
-	
+
 	By hero_title=By.xpath("//*[@id=\"corporate\"]/div[1]/section/div[2]/section/div/h1");
-	
+
 	By hero_copy=By.xpath("//*[@id=\"corporate\"]/div[1]/section/div[2]/section/div/p[1]");
-	
+
 	By details_title=By.xpath("//*[@id=\"mercedes-benz-vans-certified-pre-owned\"]/div[1]/div/header/h2");
-	
+
 	By details_copy=By.xpath("//*[@id=\"mercedes-benz-vans-certified-pre-owned\"]/div[1]/div/header/p");
-	
+
 	By details_image=By.xpath("//*[@id=\"mercedes-benz-vans-certified-pre-owned\"]/div[2]/section/div/div/div/div/div[1]/ul/li/div[2]/picture/img");
-	
+
 	By eligibility_title_text=By.xpath("//*[@id=\"cpo-vehicle-eligibility\"]/div[1]/div/header/h2");
-	
+
 	By eligibility_image1=By.xpath("//*[@id=\"cpo-vehicle-eligibility\"]/div[2]/section/div/div[1]/div/div[1]/picture/img");
-	
+
 	By eligibility_image2=By.xpath("//*[@id=\"cpo-vehicle-eligibility\"]/div[2]/section/div/div[2]/div/div[1]/picture/img");
-	
+
 	By eligibility_description1=By.xpath("//*[@id=\"cpo-vehicle-eligibility\"]/div[2]/section/div/div[1]/div/div[2]");
-	
+
 	By eligibility_description2=By.xpath("//*[@id=\"cpo-vehicle-eligibility\"]/div[2]/section/div/div[2]/div/div[2]");
-	
+
 	By exclusive_offer_button=By.xpath("");
-	
+
 	By exclusive_offer_title=By.xpath("//*[@id=\"exclusive-offer\"]/div[1]/div/header/h2");
-	
+
 	By exclusive_offer_image=By.xpath("//*[@id=\"exclusive-offer\"]/div[2]/section/div[1]/div/div/div/div[1]/ul/li/div[2]/picture/img");
-	
+
 	By exclusive_offer_copy=By.xpath("//*[@id=\"exclusive-offer\"]/div[2]/section/div[2]/div/div");
-	
+
 	By faq_button=By.xpath("");
-	
+
 	By faq_title=By.xpath("//*[@id=\"frequently-asked-questions\"]/div[1]/div/header/h2");
-	
+
 	By faq_description=By.xpath("//*[@id=\"frequently-asked-questions\"]/div[2]/div/div");
-	
+
 	By find_dealer_image=By.xpath("//*[@id=\"frequently-asked-questions\"]/div[3]/section/div[1]/div/div/div/div[1]/ul/li/div[2]/picture/img");
-	
+
 	By find_dealer_button=By.xpath("//*[@id=\"frequently-asked-questions\"]/div[3]/section/div[2]/div/a");
-	
+
 	By find_dealer_title=By.xpath("//*[@id=\"frequently-asked-questions\"]/div[3]/section/div[2]/div/h3");
-	
+
 	By find_dealer_copy=By.xpath("//*[@id=\"frequently-asked-questions\"]/div[3]/section/div[2]/div/div/p");
-	
+
+	//Events Page
+
+	By events_button=By.xpath("//*[@id=\"footer-accordionItem3\"]/ul/li[2]/a");
+
+	By events_header_title=By.xpath("//*[@id='content']/div[2]/div[1]/section/div[2]/section/div/h1");
+
+	By events_header_image=By.xpath("//*[@id=\"content\"]/div[2]/div[1]/section/div[1]/picture/img");
+
+	By events_header_copy=By.xpath("//*[@id=\"content\"]/div[2]/div[1]/section/div[2]/section/div/p[1]");
+
+	By header2_title= By.xpath("//*[@id=\"content\"]/div[2]/div[3]/table/caption");
+
+	By title1=By.xpath("//*[@id=\"content\"]/div[2]/div[3]/table/tbody/tr[1]/th");
+
+	By title2=By.xpath("//*[@id=\"content\"]/div[2]/div[3]/table/tbody/tr[2]/th");
+
+	By copy1=By.xpath("//*[@id=\"content\"]/div[2]/div[3]/table/tbody/tr[1]/td[1]");
+
+	By copy2=By.xpath("//*[@id=\"content\"]/div[2]/div[3]/table/tbody/tr[2]/td[1]");
+
+	By link1=By.xpath("//*[@id=\"content\"]/div[2]/div[3]/table/tbody/tr[1]/td[2]/a");
+
+	By link2=By.xpath("//*[@id=\"content\"]/div[2]/div[3]/table/tbody/tr[2]/td[2]/a");
+
+
 	public LoginMBVansPage(WebDriver driver)
 	{
 		this.driver=driver;
 	}
-	
+	//Home Page
 	public WebElement Get_HeroImage(WebDriver driver)
 	{
 		return driver.findElement(hero_image);
 	}
-	
+
 	public WebElement Get_Hero_title(WebDriver driver)
 	{
-		 return driver.findElement(hero_title);
+		return driver.findElement(hero_title);
 	}
-	
+
 	public WebElement Get_Hero_copy(WebDriver driver)
 	{
-		 return driver.findElement(hero_copy);
+		return driver.findElement(hero_copy);
 	}
-	
+
 	public WebElement ClickOnExclusive_Offer(WebDriver driver)
 	{
-		 return driver.findElement(exclusive_offer_button);
+		return driver.findElement(exclusive_offer_button);
 	}
-	
+
 	public WebElement Get_Exclusive_Offer_title(WebDriver driver)
 	{
-		 return driver.findElement(exclusive_offer_title);
+		return driver.findElement(exclusive_offer_title);
 	}
-	
+
 	public WebElement Get_Exclusive_Offer_image(WebDriver driver)
 	{
-		 return driver.findElement(exclusive_offer_image);
+		return driver.findElement(exclusive_offer_image);
 	}
-	
+
 	public WebElement Get_Exclusive_Offer_copy(WebDriver driver)
 	{
-		 return driver.findElement(exclusive_offer_copy);
+		return driver.findElement(exclusive_offer_copy);
 	}
-	
+
 	public WebElement ClickOn_FAQ_button(WebDriver driver)
 	{
-		 return driver.findElement(faq_button);
+		return driver.findElement(faq_button);
 	}
-	
+
 	public WebElement GetFAQTitle(WebDriver driver)
 	{
 		return driver.findElement(faq_title);
 	}
-	
+
 	public WebElement GetFAQDescription(WebDriver driver)
 	{
 		return driver.findElement(faq_description);
 	}
-	
-	
+
+
 	public WebElement Get_Details_title(WebDriver driver)
 	{
 		return driver.findElement(details_title);
 	}
-	
+
 	public WebElement Get_Details_Image(WebDriver driver)
 	{
 		return driver.findElement(details_image);
 	}
-	
+
 	public WebElement Get_Details_copy(WebDriver driver)
 	{
 		return driver.findElement(details_copy);
 	}
-	
+
 	public WebElement GetEligibilityTitle(WebDriver driver)
 	{
 		return driver.findElement(eligibility_title_text);
 	}
-	
+
 	public WebElement GetEligibility_Image1(WebDriver driver)
 	{
 		return driver.findElement(eligibility_image1);
 	}
-	
+
 	public WebElement GetEligibility_Image2(WebDriver driver)
 	{
 		return driver.findElement(eligibility_image2);
 	}
-	
+
 	public WebElement GetEligibilityCopy1(WebDriver driver)
 	{
 		return driver.findElement(eligibility_description1);
 	}
-	
+
 	public WebElement GetEligibilityCopy2(WebDriver driver)
 	{
 		return driver.findElement(eligibility_description2);
 	}
-	
-	
-	public WebElement GetFindDelaerImage(WebDriver driver)
+
+
+	public WebElement GetFindDealerImage(WebDriver driver)
 	{
-			return driver.findElement(find_dealer_image);
-	}	
-	
+		return driver.findElement(find_dealer_image);
+	}
+
 	public WebElement ClickOn_FindDealer(WebDriver driver)
 	{
 		return driver.findElement(find_dealer_button);
-	
+
 	}
-	
+
 	public WebElement GetFind_Dealer_Title(WebDriver driver)
 	{
 		return driver.findElement(find_dealer_title);
 	}
-	
+
 	public WebElement GetFind_Dealer_Copy(WebDriver driver)
 	{
 		return driver.findElement(find_dealer_copy);
 	}
-	
-	
+
+	//Events Page
+
+	public WebElement Click_OnEvents_button(WebDriver driver)
+	{
+
+		return driver.findElement(events_button);
+	}
+
+	public WebElement Get_Events_Header(WebDriver driver)
+	{
+		return driver.findElement(events_header_title);
+	}
+
+	public WebElement Get_Events_Image(WebDriver driver)
+	{
+		return driver.findElement(events_header_image);
+	}
+
+	public WebElement Get_Events_copy(WebDriver driver)
+	{
+		return driver.findElement(events_header_copy);
+	}
+
+	public WebElement Get_Events_Header2(WebDriver driver)
+	{
+		return driver.findElement(header2_title);
+	}
+
+	public WebElement Get_Events_title1(WebDriver driver)
+	{
+		return driver.findElement(title1);
+	}
+
+	public WebElement Get_Events_title2(WebDriver driver)
+	{
+		return driver.findElement(title2);
+	}
+
+	public WebElement Get_Events_copy1(WebDriver driver)
+	{
+		return driver.findElement(copy1);
+	}
+
+	public WebElement Get_Events_copy2(WebDriver driver)
+	{
+		return driver.findElement(copy2);
+	}
+
+	public WebElement Click_on_Link1(WebDriver driver)
+	{
+		return driver.findElement(link1);
+	}
+
+	public WebElement Click_on_Link2(WebDriver driver)
+	{
+		return driver.findElement(link2);
+	}
+
 }
